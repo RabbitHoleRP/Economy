@@ -1,0 +1,6 @@
+name: Economy
+version: '${project.version}'
+main: br.com.rabbithole.economy.Economy
+api-version: 1.19
+description: Global Economy Provider for Rabbit Hole RP
+prefix: Economy
