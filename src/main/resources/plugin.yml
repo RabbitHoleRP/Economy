@@ -1,0 +1,15 @@
+name: Economy
+version: '${project.version}'
+main: br.com.rabbithole.economy.Economy
+api-version: '1.20'
+authors: [FelipeSz_19]
+description: Economy Provider for Rabbit Hole Survival V3
+commands:
+  sacar:
+    description: Sacar dinheiro
+  coins:
+    description: Mostrar dinheiro
+  itens:
+    description: Gerencia Itens
+  verificar:
+    description: Verificar Itens
