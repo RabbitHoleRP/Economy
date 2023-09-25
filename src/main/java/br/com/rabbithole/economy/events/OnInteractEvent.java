@@ -18,10 +18,10 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Objects;
 
-public class InteractEvent implements Listener {
+public class OnInteractEvent implements Listener {
     final Plugin plugin;
 
-    public InteractEvent(Plugin plugin) {
+    public OnInteractEvent(Plugin plugin) {
         this.plugin = plugin;
         this.plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
