@@ -3,7 +3,6 @@ package br.com.rabbithole.economy.utils;
 import br.com.rabbithole.common.utils.SkullUtils;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;
-import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;

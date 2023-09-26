@@ -7,6 +7,7 @@ import br.com.rabbithole.economy.commands.admin.ItemsKeyVerifyCommand;
 import br.com.rabbithole.economy.commands.user.BalanceCommand;
 import br.com.rabbithole.economy.commands.user.WithdrawCommand;
 import br.com.rabbithole.economy.data.cache.CacheController;
+import br.com.rabbithole.economy.data.cache.ItemsController;
 import br.com.rabbithole.economy.data.tables.*;
 import br.com.rabbithole.economy.events.OnInteractEvent;
 import br.com.rabbithole.economy.events.OnAsyncPreLoginEvent;
@@ -18,6 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Economy extends JavaPlugin {
     private static EconomyAPI API;
     private static CacheController cache;
+    private static ItemsController items;
     private static Database database;
     private static Common common;
 
@@ -40,6 +42,7 @@ public final class Economy extends JavaPlugin {
         tasks();
         common = new Common();
         cache = new CacheController();
+        items = new ItemsController();
     }
 
     private void commands() {
@@ -59,11 +62,12 @@ public final class Economy extends JavaPlugin {
                 getConfig().getString("MySQL.User"),
                 getConfig().getString("MySQL.Password")
         );
+        EconomyAccountData.createTable();
         new CoinBagData().createTable();
         new TransactionData().createTable();
         new DuplicatedBagsData().createTable();
         new ItemsData().createTable();
-        EconomyAccountData.createTable();
+        new VariationsData().createTable();
     }
 
     private void events() {
@@ -82,6 +86,10 @@ public final class Economy extends JavaPlugin {
 
     public static CacheController getCache() {
         return cache;
+    }
+
+    public static ItemsController getItems() {
+        return items;
     }
 
     public static Database getDatabase() {

@@ -71,21 +71,6 @@ public class ItemsData {
         }
     }
 
-    public int getItemID(String itemName) {
-        String sqlQuery = """
-                SELECT item_id FROM items WHERE item_name = ?;
-                """;
-        try (Query query = Economy.getDatabase().executeQuery(sqlQuery)) {
-            query.getStatement().setString(1, itemName);
-            ResultSet resultSet = query.executeQuery();
-            if (resultSet.next()) return resultSet.getInt("item_id");
-            return -1;
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            return -1;
-        }
-    }
-
     public boolean hasItem(int itemId) {
         String sqlQuery = """
                 SELECT item_id FROM items WHERE item_id = ?;
