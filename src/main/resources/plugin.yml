@@ -13,3 +13,5 @@ commands:
     description: Gerencia Itens
   verificar:
     description: Verificar Itens
+  setnpc:
+    description: Define NPC

@@ -6,7 +6,7 @@
 
     <groupId>br.com.rabbithole</groupId>
     <artifactId>Economy</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Economy</name>
@@ -85,6 +85,13 @@
             <artifactId>Common</artifactId>
             <version>1.0.6-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.citizensnpcs</groupId>
+            <artifactId>citizens-main</artifactId>
+            <version>2.0.32-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.citizensnpcs</groupId>

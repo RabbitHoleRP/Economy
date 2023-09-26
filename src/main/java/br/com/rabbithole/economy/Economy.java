@@ -4,6 +4,7 @@ import br.com.rabbithole.common.Common;
 import br.com.rabbithole.common.core.sql.Database;
 import br.com.rabbithole.economy.commands.admin.ItemsCommand;
 import br.com.rabbithole.economy.commands.admin.ItemsKeyVerifyCommand;
+import br.com.rabbithole.economy.commands.admin.NPCCommand;
 import br.com.rabbithole.economy.commands.user.BalanceCommand;
 import br.com.rabbithole.economy.commands.user.WithdrawCommand;
 import br.com.rabbithole.economy.data.cache.CacheController;
@@ -50,6 +51,7 @@ public final class Economy extends JavaPlugin {
         new BalanceCommand();
         new ItemsKeyVerifyCommand();
         new ItemsCommand();
+        new NPCCommand();
     }
 
     private void data() {
